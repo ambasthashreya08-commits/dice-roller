@@ -16,9 +16,9 @@ A modern 3D Dice Roller built using HTML, CSS, and JavaScript.
 
 ## 🚀 Demo
 
-Play the live version here:
-
-[Live Demo](https://ambasthashreya08-commits.github.io/dice-roller/)
+<p align="center">
+  <img src="dice-demo.gif" width="400">
+</p>
 
 <!-- Replace screenshot.png with your actual screenshot file -->
 
