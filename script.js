@@ -1,7 +1,11 @@
 const dice = document.getElementById("dice");
 const result = document.getElementById("result");
+const rollBtn = document.getElementById("rollBtn");
 
-function rollDice(){
+function rollDice() {
+
+    rollBtn.disabled = true;
+    result.textContent = "Rolling...";
 
     const number = Math.floor(Math.random() * 6) + 1;
 
@@ -21,5 +25,10 @@ function rollDice(){
         rotations[number] +
         ` rotateX(${randomX}deg) rotateY(${randomY}deg)`;
 
-    result.textContent = `You rolled ${number}`;
+    setTimeout(() => {
+
+        result.textContent = `You rolled ${number}`;
+        rollBtn.disabled = false;
+
+    }, 1500);
 }

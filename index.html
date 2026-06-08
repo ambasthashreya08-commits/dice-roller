@@ -9,56 +9,60 @@
 <body>
 
     <div class="container">
+
         <h1>🎲 3D Dice Roller</h1>
 
         <div class="scene">
             <div class="dice" id="dice">
 
-    <div class="face front one">
-        <span class="dot center"></span>
-    </div>
+                <div class="face front">
+                    <span class="dot center"></span>
+                </div>
 
-    <div class="face back six">
-        <span class="dot tl"></span>
-        <span class="dot ml"></span>
-        <span class="dot bl"></span>
-        <span class="dot tr"></span>
-        <span class="dot mr"></span>
-        <span class="dot br"></span>
-    </div>
+                <div class="face back">
+                    <span class="dot tl"></span>
+                    <span class="dot ml"></span>
+                    <span class="dot bl"></span>
+                    <span class="dot tr"></span>
+                    <span class="dot mr"></span>
+                    <span class="dot br"></span>
+                </div>
 
-    <div class="face right three">
-        <span class="dot tl"></span>
-        <span class="dot center"></span>
-        <span class="dot br"></span>
-    </div>
+                <div class="face right">
+                    <span class="dot tl"></span>
+                    <span class="dot center"></span>
+                    <span class="dot br"></span>
+                </div>
 
-    <div class="face left four">
-        <span class="dot tl"></span>
-        <span class="dot tr"></span>
-        <span class="dot bl"></span>
-        <span class="dot br"></span>
-    </div>
+                <div class="face left">
+                    <span class="dot tl"></span>
+                    <span class="dot tr"></span>
+                    <span class="dot bl"></span>
+                    <span class="dot br"></span>
+                </div>
 
-    <div class="face top five">
-        <span class="dot tl"></span>
-        <span class="dot tr"></span>
-        <span class="dot center"></span>
-        <span class="dot bl"></span>
-        <span class="dot br"></span>
-    </div>
+                <div class="face top">
+                    <span class="dot tl"></span>
+                    <span class="dot tr"></span>
+                    <span class="dot center"></span>
+                    <span class="dot bl"></span>
+                    <span class="dot br"></span>
+                </div>
 
-    <div class="face bottom two">
-        <span class="dot tl"></span>
-        <span class="dot br"></span>
-    </div>
+                <div class="face bottom">
+                    <span class="dot tl"></span>
+                    <span class="dot br"></span>
+                </div>
 
-</div>
+            </div>
         </div>
 
-        <button onclick="rollDice()">Roll Dice</button>
+        <button id="rollBtn" onclick="rollDice()">
+            Roll Dice
+        </button>
 
         <h2 id="result">Click Roll!</h2>
+
     </div>
 
     <script src="script.js"></script>
