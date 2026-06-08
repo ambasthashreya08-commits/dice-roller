@@ -1,32 +1,25 @@
-function rollDice() {
+const dice = document.getElementById("dice");
+const result = document.getElementById("result");
 
-    const diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+function rollDice(){
 
-    const result = document.getElementById("result");
+    const number = Math.floor(Math.random() * 6) + 1;
 
-    result.classList.add("rolling");
+    const rotations = {
+        1: "rotateX(0deg) rotateY(0deg)",
+        2: "rotateX(90deg) rotateY(0deg)",
+        3: "rotateY(-90deg)",
+        4: "rotateY(90deg)",
+        5: "rotateX(-90deg)",
+        6: "rotateY(180deg)"
+    };
 
-    let count = 0;
+    const randomX = Math.floor(Math.random() * 4) * 360;
+    const randomY = Math.floor(Math.random() * 4) * 360;
 
-    const animation = setInterval(() => {
+    dice.style.transform =
+        rotations[number] +
+        ` rotateX(${randomX}deg) rotateY(${randomY}deg)`;
 
-        result.textContent =
-            diceFaces[Math.floor(Math.random() * 6)];
-
-        count++;
-
-        if(count > 15){
-
-            clearInterval(animation);
-
-            const finalNumber =
-                Math.floor(Math.random() * 6);
-
-            result.textContent =
-                diceFaces[finalNumber];
-
-            result.classList.remove("rolling");
-        }
-
-    },100);
+    result.textContent = `You rolled ${number}`;
 }
