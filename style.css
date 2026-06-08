@@ -107,3 +107,43 @@ button:active{
 #result{
     margin-top:25px;
 }
+.face{
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:18px;
+    border:3px solid rgba(255,255,255,0.3);
+}
+
+.dot{
+    width:18px;
+    height:18px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    box-shadow:0 2px 6px rgba(0,0,0,.3);
+}
+
+.tl{ top:18px; left:18px; }
+.tr{ top:18px; right:18px; }
+
+.ml{
+    top:50%;
+    left:18px;
+    transform:translateY(-50%);
+}
+
+.mr{
+    top:50%;
+    right:18px;
+    transform:translateY(-50%);
+}
+
+.center{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.bl{ bottom:18px; left:18px; }
+.br{ bottom:18px; right:18px; }
