@@ -1,3 +1,4 @@
+const diceSound = document.getElementById("diceSound");
 const dice = document.getElementById("dice");
 const result = document.getElementById("result");
 const rollBtn = document.getElementById("rollBtn");
@@ -6,6 +7,9 @@ function rollDice() {
 
     rollBtn.disabled = true;
     result.textContent = "Rolling...";
+
+    diceSound.currentTime = 0;
+    diceSound.play();
 
     const number = Math.floor(Math.random() * 6) + 1;
 
